@@ -1,0 +1,238 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+
+.navbar {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar-item {
+	padding: 3em;
+	font-family: "Neue Montreal", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+.centerbar {
+	position: absolute;
+	top: 60%;
+	transform: translateY(-50%);
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	z-index: 2;
+}
+
+.centerbar-item:nth-child(1) {
+	background: #5c85b3;
+	font-family: "微軟正黑體";
+	text-transform: uppercase;
+	width: 380px;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ffffff;
+	position: relative;
+	left: -80px;
+}
+
+.centerbar-item:nth-child(2) {
+	transform: rotate(-90deg);
+	position: relative;
+	top: -150px;
+	left: 100px;
+	font-family: "Neue Montreal";
+	text-transform: uppercase;
+    color: #ffffff;
+}
+
+.bottombar {
+	position: absolute;
+	bottom: 0;
+	width: 20%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.bottombar-item {
+	padding: 2em;
+	font-family: "Neue Montreal", Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
+.year {
+	font-style: italic;
+}
+
+.mail {
+	text-decoration: underline;
+}
+
+.header {
+	position: absolute;
+	left: 200px;
+	top: 0px;
+	z-index: 2;
+}
+
+.header-container {
+	display: flex;
+}
+
+
+.header-item {
+	font-family: "Canopee";
+	color: #234b79;
+	font-weight: bolder;
+	font-size: 150px;
+}
+
+.img{
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.img-one {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 280px;
+	height: 340px;
+	background: url("https://www.raw.com.tw/wp-content/uploads/2022/09/截圖-2022-09-25-下午2.01.02.png") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.img-two {
+	position: absolute;
+	top: 25%;
+	right: 0%;
+	width: 540px;
+	height: 400px;
+	background: url("https://www.raw.com.tw/wp-content/uploads/2022/09/截圖-2022-09-25-下午1.57.28.png") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+.img-three {
+	position: absolute;
+	left: 10%;
+	top: 30%;
+	transform: translateX(-50%);
+	z-index: 2;
+	width: 180px;
+	height: 200px;
+	background: url("https://www.raw.com.tw/wp-content/uploads/2022/09/截圖-2022-09-25-下午1.56.31.png") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+
+.main-bg {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+  }
+  
+  .main-bg video {
+	position: relative;
+	filter: grayscale(1);
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+	height:100%
+  }
+
+  canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+/* reservation */
+.hover-link {
+    margin: 0 auto;
+    border: none;
+    background: none;
+    color: black;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+    padding: 0 0 0.5rem;
+    font-family: "Monument Extended";
+    font-size: 1.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .hover-link > span {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    pointer-events: none;
+  }
+  
+  .hover-link > span > span {
+    display: inline-block;
+  }
+  
+  .hover-link > span > span:nth-of-type(1) {
+    transition: 0.4s ease all;
+  }
+  
+  .hover-link > span > span:nth-of-type(2) {
+    transition: 0.4s ease all;
+    transition-delay: 0.07s;
+  }
+  
+  .hover-link > span > span > span {
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(200%);
+  }
+  
+  .hover-link:hover > span > span,
+  .hover-link:focus > span > span {
+    transform: translateY(-200%);
+  }
+  
+  #cursor {
+    pointer-events: none;
+    width: 3rem;
+    height: 3rem;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.35s ease width, 0.35s ease height, 0.35s ease border,
+      0.35s ease background;
+    transform: translate(-50%, -50%);
+  }
+  
+  #cursor.button {
+    width: 5rem;
+    height: 5rem;
+    border: solid 1px transparent;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
