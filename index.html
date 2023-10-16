@@ -244,8 +244,10 @@
   //滑鼠移動事件
   let cursor = document.getElementById("cursor");
   const onMouseMove = (event) => {
+  //頁面座標=>讓光標隨著鼠標移動
     cursor.style.left = event.pageX + "px";
     cursor.style.top = event.pageY + "px";
+  
 
     if (event.target.hasAttribute("cursor-type")) {
       let cursorSize = event.target.getAttribute("cursor-type");
@@ -277,6 +279,8 @@
     stagger: {
       amount: 0.125,
     },
+      //stagger=>控制動畫間隔時間
+
   });
   gsap.to(".hero .hero-img", 0.05, { opacity: 1 });
 
@@ -294,8 +298,8 @@
 
 
   // photo
-  const allcontainer = gsap.utils.toArray(".container-item");
-  const venueImageWrap = document.querySelector(".container-img-wrap");
+  const allcontainer = gsap.utils.toArray(".container-item"); //選取多個item
+  const venueImageWrap = document.querySelector(".container-img-wrap"); 
   const venueImage = document.querySelector(".container-img");
 
   function initcontainer() {
@@ -316,6 +320,7 @@
     });
   }
 
+  //鼠標移開的話，隱藏照片
   function venueHover(e) {
     if (e.type === "mouseenter") {
       const targetImage = e.target.dataset.img;
